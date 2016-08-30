@@ -18,7 +18,7 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="U">
 	/// The type of users. Must be derived from <see cref="User"/>.
 	/// </typeparam>
-	public interface IDomosComainContainer<U> : IDomainContainer
+	public interface IDomosDomainContainer<U> : IDomainContainer
 		where U : User
 	{
 		#region Users, segregations, dispositions and security
