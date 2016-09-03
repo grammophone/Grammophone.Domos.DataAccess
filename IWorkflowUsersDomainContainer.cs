@@ -4,16 +4,14 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Grammophone.DataAccess;
 using Grammophone.Domos.Domain;
-using Grammophone.Domos.Domain.Accounting;
 using Grammophone.Domos.Domain.Workflow;
 
 namespace Grammophone.Domos.DataAccess
 {
 	/// <summary>
 	/// Abstract repository of a Domos repository,
-	/// containing users, roles, accounting, workflow, managers and permissions.
+	/// containing users, roles, workflow, managers and permissions.
 	/// </summary>
 	/// <typeparam name="U">
 	/// The type of users, derived from <see cref="User"/>.
@@ -24,34 +22,34 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="ST">
 	/// The type of state transitions, derived from <see cref="StateTransition{U}"/>.
 	/// </typeparam>
-	public interface IDomosDomainContainer<U, S, ST> : IWorkflowUsersDomainContainer<U, S, ST>
+	public interface IWorkflowUsersDomainContainer<U, S, ST> : IUsersDomainContainer<U, S>
 		where U : User
 		where S : Segregation<U>
 		where ST : StateTransition<U>
 	{
 		/// <summary>
-		/// Entity set of accounts in the system.
+		/// Entity set of workflow states in the system.
 		/// </summary>
-		IDbSet<Account> Accounts { get; }
+		IDbSet<State> State { get; }
 
 		/// <summary>
-		/// Entity set of accounting batches in the system.
+		/// Entity set of workflow state groups in the system.
 		/// </summary>
-		IDbSet<Batch> Batches { get; }
+		IDbSet<StateGroup> StateGroups { get; }
 
 		/// <summary>
-		/// Entity set of credit systems in the system.
+		/// Entity set of workflow state paths in the system.
 		/// </summary>
-		IDbSet<CreditSystem> CreditSystems { get; }
+		IDbSet<StatePath> StatePaths { get; }
 
 		/// <summary>
-		/// Entity set of accounting journals in the system.
+		/// Entity set of transitions occurred between workflow states in the system.
 		/// </summary>
-		IDbSet<Journal> Journals { get; }
+		IDbSet<ST> StateTransitions { get; }
 
 		/// <summary>
-		/// Entity set of accounting journal lines in the system.
+		/// Entity set of workflow graphs in the system.
 		/// </summary>
-		IDbSet<JournalLine> JournalLines { get; }
+		IDbSet<WorkflowGraph> WorkflowGraphs { get; }
 	}
 }
