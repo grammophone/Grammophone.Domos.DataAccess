@@ -16,15 +16,11 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="U">
 	/// The type of users, derived from <see cref="User"/>.
 	/// </typeparam>
-	/// <typeparam name="S">
-	/// The type of segregations, derived from <see cref="Segregation{U}"/>.
-	/// </typeparam>
 	/// <typeparam name="ST">
 	/// The type of state transitions, derived from <see cref="StateTransition{U}"/>.
 	/// </typeparam>
-	public interface IWorkflowUsersDomainContainer<U, S, ST> : IUsersDomainContainer<U, S>
+	public interface IWorkflowUsersDomainContainer<U, ST> : IUsersDomainContainer<U>
 		where U : User
-		where S : Segregation<U>
 		where ST : StateTransition<U>
 	{
 		/// <summary>

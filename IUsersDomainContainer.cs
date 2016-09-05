@@ -15,12 +15,8 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="U">
 	/// The type of users, derived from <see cref="User"/>.
 	/// </typeparam>
-	/// <typeparam name="S">
-	/// The type of segregations, derived from <see cref="Segregation{U}"/>.
-	/// </typeparam>
-	public interface IUsersDomainContainer<U, S>
+	public interface IUsersDomainContainer<U>
 		where U : User
-		where S : Segregation<U>
 	{
 		/// <summary>
 		/// Entity set of users in the system.
@@ -54,11 +50,6 @@ namespace Grammophone.Domos.DataAccess
 		/// only used if defined in database.
 		/// </summary>
 		IDbSet<Permission> Permissions { get; }
-
-		/// <summary>
-		/// Entity set of segregations in the system.
-		/// </summary>
-		IDbSet<S> Segregations { get; }
 
 		/// <summary>
 		/// Entity set of dispositions in the system.
