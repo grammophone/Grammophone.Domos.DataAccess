@@ -21,19 +21,24 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="ST">
 	/// The type of state transitions, derived from <see cref="StateTransition{U}"/>.
 	/// </typeparam>
-	public interface IDomosDomainContainer<U, ST> : IWorkflowUsersDomainContainer<U, ST>
+	/// <typeparam name="A">The type of accounts, derived from <see cref="Account{U}"/>.</typeparam>
+	/// <typeparam name="P">The type of the postings, derived from <see cref="Posting{U, A}"/>.</typeparam>
+	/// <typeparam name="R">The type of remittances, derived from <see cref="Remittance{U, A}"/>.</typeparam>
+	/// <typeparam name="J">
+	/// The type of accounting journals, derived from <see cref="Journal{U, ST, A, P, R}"/>.
+	/// </typeparam>
+	public interface IDomosDomainContainer<U, ST, A, P, R, J> : IWorkflowUsersDomainContainer<U, ST>
 		where U : User
 		where ST : StateTransition<U>
+		where A : Account<U>
+		where P : Posting<U, A>
+		where R : Remittance<U, A>
+		where J : Journal<U, ST, A, P, R>
 	{
 		/// <summary>
 		/// Entity set of accounts in the system.
 		/// </summary>
-		IDbSet<Account> Accounts { get; }
-
-		/// <summary>
-		/// Entity set of accounting batches in the system.
-		/// </summary>
-		IDbSet<Batch> Batches { get; }
+		IDbSet<A> Accounts { get; }
 
 		/// <summary>
 		/// Entity set of credit systems in the system.
@@ -43,11 +48,16 @@ namespace Grammophone.Domos.DataAccess
 		/// <summary>
 		/// Entity set of accounting journals in the system.
 		/// </summary>
-		IDbSet<Journal> Journals { get; }
+		IDbSet<J> Journals { get; }
 
 		/// <summary>
-		/// Entity set of accounting journal lines in the system.
+		/// Entity set of the accounting postings in the system.
 		/// </summary>
-		IDbSet<JournalLine> JournalLines { get; }
+		IDbSet<P> Postings { get; }
+
+		/// <summary>
+		/// Entity set of the accounting remittances in the system.
+		/// </summary>
+		IDbSet<R> Remittances { get; }
 	}
 }
