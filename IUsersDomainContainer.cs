@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Grammophone.DataAccess;
 using Grammophone.Domos.Domain;
 
 namespace Grammophone.Domos.DataAccess
@@ -15,7 +16,7 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="U">
 	/// The type of users, derived from <see cref="User"/>.
 	/// </typeparam>
-	public interface IUsersDomainContainer<U>
+	public interface IUsersDomainContainer<U> : IDomainContainer
 		where U : User
 	{
 		/// <summary>
