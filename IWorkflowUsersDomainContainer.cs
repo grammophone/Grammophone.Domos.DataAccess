@@ -26,7 +26,7 @@ namespace Grammophone.Domos.DataAccess
 		/// <summary>
 		/// Entity set of workflow states in the system.
 		/// </summary>
-		IDbSet<State> State { get; }
+		IDbSet<State> States { get; }
 
 		/// <summary>
 		/// Entity set of workflow state groups in the system.
