@@ -35,24 +35,6 @@ namespace Grammophone.Domos.DataAccess
 		IDbSet<Role> Roles { get; }
 
 		/// <summary>
-		/// Entity set of entity accesses in the system,
-		/// only used if defined in database.
-		/// </summary>
-		IDbSet<EntityAccess> EntityAccesses { get; }
-
-		/// <summary>
-		/// Entity set of manager accesses in the system,
-		/// only used if defined in database.
-		/// </summary>
-		IDbSet<ManagerAccess> ManagerAccesses { get; }
-
-		/// <summary>
-		/// Entity set of permissions in the system,
-		/// only used if defined in database.
-		/// </summary>
-		IDbSet<Permission> Permissions { get; }
-
-		/// <summary>
 		/// Entity set of dispositions in the system.
 		/// </summary>
 		IDbSet<Disposition> Dispositions { get; }
