@@ -36,6 +36,7 @@ namespace Grammophone.Domos.DataAccess
 
 		/// <summary>
 		/// Entity set of dispositions in the system.
+		/// These function as roles within a segregation.
 		/// </summary>
 		IDbSet<Disposition> Dispositions { get; }
 	}
