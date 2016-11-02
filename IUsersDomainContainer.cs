@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Grammophone.DataAccess;
 using Grammophone.Domos.Domain;
+using Grammophone.Domos.Domain.Files;
 
 namespace Grammophone.Domos.DataAccess
 {
@@ -39,5 +40,10 @@ namespace Grammophone.Domos.DataAccess
 		/// These function as roles within a segregation.
 		/// </summary>
 		IDbSet<Disposition> Dispositions { get; }
+
+		/// <summary>
+		/// The MIME content types in the system.
+		/// </summary>
+		IDbSet<ContentType> ContentTypes { get; }
 	}
 }
