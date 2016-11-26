@@ -18,8 +18,8 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="U">
 	/// The type of users, derived from <see cref="User"/>.
 	/// </typeparam>
-	/// <typeparam name="ST">
-	/// The type of state transitions, derived from <see cref="StateTransition{U}"/>.
+	/// <typeparam name="BST">
+	/// The base type of the system's state transitions, derived from <see cref="StateTransition{U}"/>.
 	/// </typeparam>
 	/// <typeparam name="A">The type of accounts, derived from <see cref="Account{U}"/>.</typeparam>
 	/// <typeparam name="P">The type of the postings, derived from <see cref="Posting{U, A}"/>.</typeparam>
@@ -27,13 +27,13 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="J">
 	/// The type of accounting journals, derived from <see cref="Journal{U, ST, A, P, R}"/>.
 	/// </typeparam>
-	public interface IDomosDomainContainer<U, ST, A, P, R, J> : IWorkflowUsersDomainContainer<U, ST>
+	public interface IDomosDomainContainer<U, BST, A, P, R, J> : IWorkflowUsersDomainContainer<U, BST>
 		where U : User
-		where ST : StateTransition<U>
+		where BST : StateTransition<U>
 		where A : Account<U>
 		where P : Posting<U, A>
 		where R : Remittance<U, A>
-		where J : Journal<U, ST, A, P, R>
+		where J : Journal<U, BST, A, P, R>
 	{
 		/// <summary>
 		/// Entity set of accounts in the system.

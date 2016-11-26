@@ -16,12 +16,12 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="U">
 	/// The type of users, derived from <see cref="User"/>.
 	/// </typeparam>
-	/// <typeparam name="ST">
-	/// The type of state transitions, derived from <see cref="StateTransition{U}"/>.
+	/// <typeparam name="BST">
+	/// The base type of the system's state transitions, derived from <see cref="StateTransition{U}"/>.
 	/// </typeparam>
-	public interface IWorkflowUsersDomainContainer<U, ST> : IUsersDomainContainer<U>
+	public interface IWorkflowUsersDomainContainer<U, BST> : IUsersDomainContainer<U>
 		where U : User
-		where ST : StateTransition<U>
+		where BST : StateTransition<U>
 	{
 		/// <summary>
 		/// Entity set of workflow states in the system.
@@ -41,7 +41,7 @@ namespace Grammophone.Domos.DataAccess
 		/// <summary>
 		/// Entity set of transitions occurred between workflow states in the system.
 		/// </summary>
-		IDbSet<ST> StateTransitions { get; }
+		IDbSet<BST> StateTransitions { get; }
 
 		/// <summary>
 		/// Entity set of workflow graphs in the system.
