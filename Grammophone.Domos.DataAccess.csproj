@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="IDomosDomainContainer.cs" />
     <Compile Include="IUsersDomainContainer.cs" />
+    <Compile Include="IUserTrackingEntityListener.cs" />
     <Compile Include="IWorkflowUsersDomainContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
