@@ -59,5 +59,15 @@ namespace Grammophone.Domos.DataAccess
 		/// Entity set of the accounting remittances in the system.
 		/// </summary>
 		IDbSet<R> Remittances { get; }
+
+		/// <summary>
+		/// The Electronic Funds Transfer (EFT/ACH) requests in the system.
+		/// </summary>
+		IDbSet<FundsTransferRequest> FundsTransferRequests { get; }
+
+		/// <summary>
+		/// The events taking place for <see cref="FundsTransferRequests"/> in the system.
+		/// </summary>
+		IDbSet<FundsTransferEvent> FundsTransferEvents { get; }
 	}
 }
