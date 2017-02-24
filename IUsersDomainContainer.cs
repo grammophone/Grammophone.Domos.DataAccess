@@ -45,5 +45,10 @@ namespace Grammophone.Domos.DataAccess
 		/// The MIME content types in the system.
 		/// </summary>
 		IDbSet<ContentType> ContentTypes { get; }
+
+		/// <summary>
+		/// the disposition types in the system.
+		/// </summary>
+		IDbSet<DispositionType> DispositionTypes { get; }
 	}
 }
