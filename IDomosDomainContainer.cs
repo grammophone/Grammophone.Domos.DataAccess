@@ -21,24 +21,22 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="BST">
 	/// The base type of the system's state transitions, derived from <see cref="StateTransition{U}"/>.
 	/// </typeparam>
-	/// <typeparam name="A">The type of accounts, derived from <see cref="Account{U}"/>.</typeparam>
-	/// <typeparam name="P">The type of the postings, derived from <see cref="Posting{U, A}"/>.</typeparam>
-	/// <typeparam name="R">The type of remittances, derived from <see cref="Remittance{U, A}"/>.</typeparam>
+	/// <typeparam name="P">The type of the postings, derived from <see cref="Posting{U}"/>.</typeparam>
+	/// <typeparam name="R">The type of remittances, derived from <see cref="Remittance{U}"/>.</typeparam>
 	/// <typeparam name="J">
-	/// The type of accounting journals, derived from <see cref="Journal{U, ST, A, P, R}"/>.
+	/// The type of accounting journals, derived from <see cref="Journal{U, ST, P, R}"/>.
 	/// </typeparam>
-	public interface IDomosDomainContainer<U, BST, A, P, R, J> : IWorkflowUsersDomainContainer<U, BST>
+	public interface IDomosDomainContainer<U, BST, P, R, J> : IWorkflowUsersDomainContainer<U, BST>
 		where U : User
 		where BST : StateTransition<U>
-		where A : Account<U>
-		where P : Posting<U, A>
-		where R : Remittance<U, A>
-		where J : Journal<U, BST, A, P, R>
+		where P : Posting<U>
+		where R : Remittance<U>
+		where J : Journal<U, BST, P, R>
 	{
 		/// <summary>
 		/// Entity set of accounts in the system.
 		/// </summary>
-		IDbSet<A> Accounts { get; }
+		IDbSet<Account> Accounts { get; }
 
 		/// <summary>
 		/// Entity set of credit systems in the system.
