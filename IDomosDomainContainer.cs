@@ -67,5 +67,15 @@ namespace Grammophone.Domos.DataAccess
 		/// The events taking place for <see cref="FundsTransferRequests"/> in the system.
 		/// </summary>
 		IDbSet<FundsTransferEvent> FundsTransferEvents { get; }
+
+		/// <summary>
+		/// Batches of <see cref="FundsTransferRequest"/>s.
+		/// </summary>
+		IDbSet<FundsTransferRequestBatch> FundsTransferRequestBatches { get; }
+
+		/// <summary>
+		/// Collations of <see cref="FundsTransferEventCollation"/>s.
+		/// </summary>
+		IDbSet<FundsTransferEventCollation> FundsTransferEventCollations { get; }
 	}
 }
