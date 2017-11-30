@@ -77,11 +77,5 @@ namespace Grammophone.Domos.DataAccess
 		/// Collations of <see cref="FundsTransferEventCollation"/>s.
 		/// </summary>
 		IDbSet<FundsTransferEventCollation> FundsTransferEventCollations { get; }
-
-		/// <summary>
-		/// Recordings of attempts of executions of workflow state paths
-		/// associated with <see cref="FundsTransferEvents"/>s.
-		/// </summary>
-		IDbSet<WorkflowExecution> WorkflowExecutions { get; }
 	}
 }
