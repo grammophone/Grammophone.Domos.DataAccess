@@ -74,13 +74,8 @@ namespace Grammophone.Domos.DataAccess
 		IDbSet<FundsTransferBatch> FundsTransferBatches { get; }
 
 		/// <summary>
-		/// Events recording the history of <see cref="FundsTransferBatches"/>.
+		/// Messages recording the history of <see cref="FundsTransferBatches"/>.
 		/// </summary>
-		IDbSet<FundsTransferBatchEvent> FundsTransferBatchEvents { get; }
-
-		/// <summary>
-		/// Collations of <see cref="FundsTransferEventCollation"/>s.
-		/// </summary>
-		IDbSet<FundsTransferEventCollation> FundsTransferEventCollations { get; }
+		IDbSet<FundsTransferBatchMessage> FundsTransferBatchMessages { get; }
 	}
 }
