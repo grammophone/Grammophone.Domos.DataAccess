@@ -77,5 +77,10 @@ namespace Grammophone.Domos.DataAccess
 		/// Messages recording the history of <see cref="FundsTransferBatches"/>.
 		/// </summary>
 		IDbSet<FundsTransferBatchMessage> FundsTransferBatchMessages { get; }
+
+		/// <summary>
+		/// The set of funds transfer request groups in the system.
+		/// </summary>
+		IDbSet<FundsTransferRequestGroup> FundsTransferRequestGroups { get; }
 	}
 }
