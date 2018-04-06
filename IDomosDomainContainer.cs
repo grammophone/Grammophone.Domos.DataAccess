@@ -103,7 +103,7 @@ namespace Grammophone.Domos.DataAccess
 	/// <typeparam name="IL">The type of invoice line, derived from <see cref="InvoiceLine{U, P, R, ILTC}"/>.</typeparam>
 	/// <typeparam name="IE">The type of invoice event, derived from <see cref="InvoiceEvent{U, P, R}"/>.</typeparam>
 	/// <typeparam name="I">The type of invoices, derived from <see cref="Invoice{U, P, R, ILTC, IL, IE}"/>.</typeparam>
-	public interface IDomosDomainContainer<U, BST, P, R, J, ILTC, IL, IE, I>
+	public interface IDomosDomainContainer<U, BST, P, R, J, ILTC, IL, IE, I> : IDomosDomainContainer<U, BST, P, R, J>
 		where U : User
 		where BST : StateTransition<U>
 		where P : Posting<U>
