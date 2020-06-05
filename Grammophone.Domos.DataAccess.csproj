@@ -1,18 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProjectGuid>{02D58DC8-AB2F-4120-88D7-358B2456F58F}</ProjectGuid>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFrameworks>net472;netstandard2.1</TargetFrameworks>
     <AssemblyTitle>Grammophone.Domos.DataAccess</AssemblyTitle>
     <Product>Grammophone.Domos.DataAccess</Product>
     <Copyright>Copyright ©  2016</Copyright>
-    <DocumentationFile>bin\$(Configuration)\Grammophone.Domos.DataAccess.XML</DocumentationFile>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Grammophone.Domos.DataAccess.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net472|AnyCPU'">
+    <DocumentationFile>C:\Projects\dotNet\Repositories\Solutions\LifeAccount.CoreDevelopment\Components\Grammophone.Domos.DataAccess\Grammophone.Domos.DataAccess.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />

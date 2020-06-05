@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Grammophone.Domos.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:Grammophone.Domos.DataAccess.IDomosDomainContainer`5">
+            <summary>
+            Abstract repository of a Domos repository,
+            containing users, roles, accounting, workflow, managers and permissions.
+            </summary>
+            <typeparam name="U">
+            The type of users, derived from <see cref="T:Grammophone.Domos.Domain.User"/>.
+            </typeparam>
+            <typeparam name="BST">
+            The base type of the system's state transitions, derived from <see cref="T:Grammophone.Domos.Domain.Workflow.StateTransition`1"/>.
+            </typeparam>
+            <typeparam name="P">The type of the postings, derived from <see cref="T:Grammophone.Domos.Domain.Accounting.Posting`1"/>.</typeparam>
+            <typeparam name="R">The type of remittances, derived from <see cref="T:Grammophone.Domos.Domain.Accounting.Remittance`1"/>.</typeparam>
+            <typeparam name="J">
+            The type of accounting journals, derived from <see cref="T:Grammophone.Domos.Domain.Accounting.Journal`4"/>.
+            </typeparam>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.Accounts">
+            <summary>
+            Entity set of accounts in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.CreditSystems">
+            <summary>
+            Entity set of credit systems in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.Journals">
+            <summary>
+            Entity set of accounting journals in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.Postings">
+            <summary>
+            Entity set of the accounting postings in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.Remittances">
+            <summary>
+            Entity set of the accounting remittances in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.FundsTransferRequests">
+            <summary>
+            The Electronic Funds Transfer (EFT/ACH) requests in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.FundsTransferEvents">
+            <summary>
+            The events taking place for <see cref="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.FundsTransferRequests"/> in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.FundsTransferBatches">
+            <summary>
+            Batches of <see cref="T:Grammophone.Domos.Domain.Accounting.FundsTransferRequest"/>s.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.FundsTransferBatchMessages">
+            <summary>
+            Messages recording the history of <see cref="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.FundsTransferBatches"/>.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`5.FundsTransferRequestGroups">
+            <summary>
+            The set of funds transfer request groups in the system.
+            </summary>
+        </member>
+        <member name="T:Grammophone.Domos.DataAccess.IDomosDomainContainer`9">
+            <summary>
+            Abstract repository of a Domos repository,
+            containing users, roles, accounting, workflow, managers and permissions.
+            </summary>
+            <typeparam name="U">
+            The type of users, derived from <see cref="T:Grammophone.Domos.Domain.User"/>.
+            </typeparam>
+            <typeparam name="BST">
+            The base type of the system's state transitions, derived from <see cref="T:Grammophone.Domos.Domain.Workflow.StateTransition`1"/>.
+            </typeparam>
+            <typeparam name="P">The type of the postings, derived from <see cref="T:Grammophone.Domos.Domain.Accounting.Posting`1"/>.</typeparam>
+            <typeparam name="R">The type of remittances, derived from <see cref="T:Grammophone.Domos.Domain.Accounting.Remittance`1"/>.</typeparam>
+            <typeparam name="J">
+            The type of accounting journals, derived from <see cref="T:Grammophone.Domos.Domain.Accounting.Journal`4"/>.
+            </typeparam>
+            <typeparam name="ILTC">The type of invoice line tax components, derived from <see cref="T:Grammophone.Domos.Domain.Accounting.InvoiceLineTaxComponent`3"/>.</typeparam>
+            <typeparam name="IL">The type of invoice line, derived from <see cref="T:Grammophone.Domos.Domain.Accounting.InvoiceLine`4"/>.</typeparam>
+            <typeparam name="IE">The type of invoice event, derived from <see cref="T:Grammophone.Domos.Domain.Accounting.InvoiceEvent`3"/>.</typeparam>
+            <typeparam name="I">The type of invoices, derived from <see cref="T:Grammophone.Domos.Domain.Accounting.Invoice`6"/>.</typeparam>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`9.Invoices">
+            <summary>
+            The set of invoices in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`9.InvoiceEvents">
+            <summary>
+            The set of invoice events in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`9.InvoiceLines">
+            <summary>
+            The set of invoice lines in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IDomosDomainContainer`9.InvoiceLineTaxComponents">
+            <summary>
+            The set of invoice line tax components in the system.
+            </summary>
+        </member>
+        <member name="T:Grammophone.Domos.DataAccess.IUsersDomainContainer`1">
+            <summary>
+            Abstract repository of a Domos repository,
+            containing users, roles and permissions.
+            </summary>
+            <typeparam name="U">
+            The type of users, derived from <see cref="T:Grammophone.Domos.Domain.User"/>.
+            </typeparam>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IUsersDomainContainer`1.Users">
+            <summary>
+            Entity set of users in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IUsersDomainContainer`1.Registrations">
+            <summary>
+            Entity set of registrations in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IUsersDomainContainer`1.Roles">
+            <summary>
+            Entity set of roles in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IUsersDomainContainer`1.Dispositions">
+            <summary>
+            Entity set of dispositions in the system.
+            These function as roles within a segregation.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IUsersDomainContainer`1.ContentTypes">
+            <summary>
+            The MIME content types in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IUsersDomainContainer`1.DispositionTypes">
+            <summary>
+            the disposition types in the system.
+            </summary>
+        </member>
+        <member name="T:Grammophone.Domos.DataAccess.IUserTrackingEntityListener">
+            <summary>
+            Marker interface for entity listeners
+            updating <see cref="P:Grammophone.Domos.Domain.TrackingEntity`1.CreatorUser"/>,
+            <see cref="P:Grammophone.Domos.Domain.TrackingEntity`1.CreationDate"/>, 
+            <see cref="P:Grammophone.Domos.Domain.TrackingEntity`1.LastModifierUser"/>
+            <see cref="P:Grammophone.Domos.Domain.TrackingEntity`1.LastModificationDate"/>
+            and <see cref="P:Grammophone.Domos.Domain.UserTrackingEntity`1.OwningUser"/>.
+            </summary>
+        </member>
+        <member name="T:Grammophone.Domos.DataAccess.IWorkflowUsersDomainContainer`2">
+            <summary>
+            Abstract repository of a Domos repository,
+            containing users, roles, workflow, managers and permissions.
+            </summary>
+            <typeparam name="U">
+            The type of users, derived from <see cref="T:Grammophone.Domos.Domain.User"/>.
+            </typeparam>
+            <typeparam name="BST">
+            The base type of the system's state transitions, derived from <see cref="T:Grammophone.Domos.Domain.Workflow.StateTransition`1"/>.
+            </typeparam>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IWorkflowUsersDomainContainer`2.States">
+            <summary>
+            Entity set of workflow states in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IWorkflowUsersDomainContainer`2.StateGroups">
+            <summary>
+            Entity set of workflow state groups in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IWorkflowUsersDomainContainer`2.StatePaths">
+            <summary>
+            Entity set of workflow state paths in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IWorkflowUsersDomainContainer`2.StateTransitions">
+            <summary>
+            Entity set of transitions occurred between workflow states in the system.
+            </summary>
+        </member>
+        <member name="P:Grammophone.Domos.DataAccess.IWorkflowUsersDomainContainer`2.WorkflowGraphs">
+            <summary>
+            Entity set of workflow graphs in the system.
+            </summary>
+        </member>
+    </members>
+</doc>
