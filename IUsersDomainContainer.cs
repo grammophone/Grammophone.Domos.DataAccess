@@ -50,5 +50,20 @@ namespace Grammophone.Domos.DataAccess
 		/// the disposition types in the system.
 		/// </summary>
 		IDbSet<DispositionType> DispositionTypes { get; }
+
+		/// <summary>
+		/// The WebAuthn Users' Credentials stored in the system.
+		/// </summary>
+		IDbSet<WebAuthnCredential> WebAuthnCredentials { get; }
+
+		/// <summary>
+		/// The Browser Sessions of the users.
+		/// </summary>
+		IDbSet<BrowserSession> BrowserSessions { get; }
+
+		/// <summary>
+		/// The IP addresses of clients of the application.
+		/// </summary>
+		IDbSet<ClientIpAddress> ClientIpAddresses { get; }
 	}
 }
