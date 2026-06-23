@@ -14,9 +14,6 @@
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="EntityFramework" Version="6.4.4" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Grammophone.DataAccess\Grammophone.DataAccess.csproj" />
     <ProjectReference Include="..\Grammophone.Domos.Domain\Grammophone.Domos.Domain.csproj" />
   </ItemGroup>

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,52 +35,52 @@ namespace Grammophone.Domos.DataAccess
 		/// <summary>
 		/// Entity set of accounts in the system.
 		/// </summary>
-		IDbSet<Account> Accounts { get; }
+		IEntitySet<Account> Accounts { get; }
 
 		/// <summary>
 		/// Entity set of credit systems in the system.
 		/// </summary>
-		IDbSet<CreditSystem> CreditSystems { get; }
+		IEntitySet<CreditSystem> CreditSystems { get; }
 
 		/// <summary>
 		/// Entity set of accounting journals in the system.
 		/// </summary>
-		IDbSet<J> Journals { get; }
+		IEntitySet<J> Journals { get; }
 
 		/// <summary>
 		/// Entity set of the accounting postings in the system.
 		/// </summary>
-		IDbSet<P> Postings { get; }
+		IEntitySet<P> Postings { get; }
 
 		/// <summary>
 		/// Entity set of the accounting remittances in the system.
 		/// </summary>
-		IDbSet<R> Remittances { get; }
+		IEntitySet<R> Remittances { get; }
 
 		/// <summary>
 		/// The Electronic Funds Transfer (EFT/ACH) requests in the system.
 		/// </summary>
-		IDbSet<FundsTransferRequest> FundsTransferRequests { get; }
+		IEntitySet<FundsTransferRequest> FundsTransferRequests { get; }
 
 		/// <summary>
 		/// The events taking place for <see cref="FundsTransferRequests"/> in the system.
 		/// </summary>
-		IDbSet<FundsTransferEvent> FundsTransferEvents { get; }
+		IEntitySet<FundsTransferEvent> FundsTransferEvents { get; }
 
 		/// <summary>
 		/// Batches of <see cref="FundsTransferRequest"/>s.
 		/// </summary>
-		IDbSet<FundsTransferBatch> FundsTransferBatches { get; }
+		IEntitySet<FundsTransferBatch> FundsTransferBatches { get; }
 
 		/// <summary>
 		/// Messages recording the history of <see cref="FundsTransferBatches"/>.
 		/// </summary>
-		IDbSet<FundsTransferBatchMessage> FundsTransferBatchMessages { get; }
+		IEntitySet<FundsTransferBatchMessage> FundsTransferBatchMessages { get; }
 
 		/// <summary>
 		/// The set of funds transfer request groups in the system.
 		/// </summary>
-		IDbSet<FundsTransferRequestGroup> FundsTransferRequestGroups { get; }
+		IEntitySet<FundsTransferRequestGroup> FundsTransferRequestGroups { get; }
 	}
 
 	/// <summary>
@@ -117,21 +116,21 @@ namespace Grammophone.Domos.DataAccess
 		/// <summary>
 		/// The set of invoices in the system.
 		/// </summary>
-		IDbSet<I> Invoices { get; }
+		IEntitySet<I> Invoices { get; }
 
 		/// <summary>
 		/// The set of invoice events in the system.
 		/// </summary>
-		IDbSet<IE> InvoiceEvents { get; }
+		IEntitySet<IE> InvoiceEvents { get; }
 
 		/// <summary>
 		/// The set of invoice lines in the system.
 		/// </summary>
-		IDbSet<IL> InvoiceLines { get; }
+		IEntitySet<IL> InvoiceLines { get; }
 
 		/// <summary>
 		/// The set of invoice line tax components in the system.
 		/// </summary>
-		IDbSet<ILTC> InvoiceLineTaxComponents { get; }
+		IEntitySet<ILTC> InvoiceLineTaxComponents { get; }
 	}
 }

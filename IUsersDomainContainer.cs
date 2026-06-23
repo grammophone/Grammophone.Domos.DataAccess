@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,47 +22,47 @@ namespace Grammophone.Domos.DataAccess
 		/// <summary>
 		/// Entity set of users in the system.
 		/// </summary>
-		IDbSet<U> Users { get; }
+		IEntitySet<U> Users { get; }
 
 		/// <summary>
 		/// Entity set of registrations in the system.
 		/// </summary>
-		IDbSet<Registration> Registrations { get; }
+		IEntitySet<Registration> Registrations { get; }
 
 		/// <summary>
 		/// Entity set of roles in the system.
 		/// </summary>
-		IDbSet<Role> Roles { get; }
+		IEntitySet<Role> Roles { get; }
 
 		/// <summary>
 		/// Entity set of dispositions in the system.
 		/// These function as roles within a segregation.
 		/// </summary>
-		IDbSet<Disposition> Dispositions { get; }
+		IEntitySet<Disposition> Dispositions { get; }
 
 		/// <summary>
 		/// The MIME content types in the system.
 		/// </summary>
-		IDbSet<ContentType> ContentTypes { get; }
+		IEntitySet<ContentType> ContentTypes { get; }
 
 		/// <summary>
 		/// the disposition types in the system.
 		/// </summary>
-		IDbSet<DispositionType> DispositionTypes { get; }
+		IEntitySet<DispositionType> DispositionTypes { get; }
 
 		/// <summary>
 		/// The WebAuthn Users' Credentials stored in the system.
 		/// </summary>
-		IDbSet<WebAuthnCredential> WebAuthnCredentials { get; }
+		IEntitySet<WebAuthnCredential> WebAuthnCredentials { get; }
 
 		/// <summary>
 		/// The Browser Sessions of the users.
 		/// </summary>
-		IDbSet<BrowserSession> BrowserSessions { get; }
+		IEntitySet<BrowserSession> BrowserSessions { get; }
 
 		/// <summary>
 		/// The IP addresses of clients of the application.
 		/// </summary>
-		IDbSet<ClientIpAddress> ClientIpAddresses { get; }
+		IEntitySet<ClientIpAddress> ClientIpAddresses { get; }
 	}
 }

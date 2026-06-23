@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Grammophone.DataAccess;
 using Grammophone.Domos.Domain;
 using Grammophone.Domos.Domain.Workflow;
 
@@ -26,26 +26,26 @@ namespace Grammophone.Domos.DataAccess
 		/// <summary>
 		/// Entity set of workflow states in the system.
 		/// </summary>
-		IDbSet<State> States { get; }
+		IEntitySet<State> States { get; }
 
 		/// <summary>
 		/// Entity set of workflow state groups in the system.
 		/// </summary>
-		IDbSet<StateGroup> StateGroups { get; }
+		IEntitySet<StateGroup> StateGroups { get; }
 
 		/// <summary>
 		/// Entity set of workflow state paths in the system.
 		/// </summary>
-		IDbSet<StatePath> StatePaths { get; }
+		IEntitySet<StatePath> StatePaths { get; }
 
 		/// <summary>
 		/// Entity set of transitions occurred between workflow states in the system.
 		/// </summary>
-		IDbSet<BST> StateTransitions { get; }
+		IEntitySet<BST> StateTransitions { get; }
 
 		/// <summary>
 		/// Entity set of workflow graphs in the system.
 		/// </summary>
-		IDbSet<WorkflowGraph> WorkflowGraphs { get; }
+		IEntitySet<WorkflowGraph> WorkflowGraphs { get; }
 	}
 }
