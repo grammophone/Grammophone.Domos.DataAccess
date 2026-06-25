@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProjectGuid>{02D58DC8-AB2F-4120-88D7-358B2456F58F}</ProjectGuid>
-    <TargetFrameworks>net472;netstandard2.1</TargetFrameworks>
-    <AssemblyTitle>Grammophone.Domos.DataAccess</AssemblyTitle>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<AssemblyTitle>Grammophone.Domos.DataAccess</AssemblyTitle>
     <Product>Grammophone.Domos.DataAccess</Product>
     <Copyright>Copyright ©  2016</Copyright>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Grammophone.Domos.DataAccess.XML</DocumentationFile>
